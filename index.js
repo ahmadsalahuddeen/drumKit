@@ -1,5 +1,10 @@
 var buttonLength = document.querySelectorAll(".drum").length;
 
+//Detect meow
+document.querySelector(".meow").addEventListener("click", function(){
+    var playMeow = new Audio('sounds/meow.mp3');
+    playMeow.play();
+})
 
 // detect button press
 for( i = 0; i < buttonLength; i++){
@@ -7,6 +12,7 @@ for( i = 0; i < buttonLength; i++){
     document.querySelectorAll(".drum")[i].addEventListener("click", function(){
 var buttonInnerHtml = this.innerHTML;
 makeSound(buttonInnerHtml);
+animateButton(buttonInnerHtml);
     });
 
 }
@@ -15,6 +21,7 @@ makeSound(buttonInnerHtml);
 
 document.addEventListener("keypress", (event)=>{
 makeSound(event.key);
+animateButton(event.key);
 })
 
 // play sound
@@ -58,8 +65,20 @@ switch (key) {
             var meow = new Audio('sounds/meow.mp3');
             meow.play();
             break;
+            // case "Made with 💜 by swalahCodes":
+            // var meow = new Audio('sounds/meow.mp3');
+            // meow.play();
+            // break;
     default: console.log(buttonInnerHtml);
         break;
 }
 
+}
+function animateButton(buttonkey){
+    var activeButton = document.querySelector("." + buttonkey).classList;
+ activeButton.add("pressed");
+setTimeout(() => {
+    activeButton.remove("pressed");
+
+}, 100);
 }
