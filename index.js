@@ -51,11 +51,13 @@ switch (key) {
                 kickBass.play();
                 break;
                 case "l":
-        var crash = new Audio('sounds/crash.mp3');
-        crash.play();
+               var crash = new Audio('sounds/crash.mp3');
+              crash.play();
         break;
-        case "m":
-            
+             case "m":
+            var meow = new Audio('sounds/meow.mp3');
+            meow.play();
+            break;
     default: console.log(buttonInnerHtml);
         break;
 }

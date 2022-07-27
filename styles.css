@@ -44,6 +44,14 @@ background-image: url('/images/tom1.png');
   background-image: url('/images/crash.png');
 }
 
+.m {
+  padding: 0;
+border: none;
+background: none;
+  color: #DBEDF3;
+  font-family: sans-serif;
+}
+
 .set {
   margin: 10% auto;
 }
@@ -62,7 +70,7 @@ background-image: url('/images/tom1.png');
   color: red;
 }
 
-.drum {
+.buttonDec {
   outline: none;
   border: 10px solid #404B69;
   font-size: 5rem;
@@ -79,3 +87,4 @@ background-image: url('/images/tom1.png');
   margin: 10px;
   background-color: white;
 }
+
