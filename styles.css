@@ -45,7 +45,9 @@ background-image: url('/images/tom1.png');
 }
 
 .m {
-  padding: 0;
+  width: 150px;
+  height: 150px;
+  display: inline-block;
 border: none;
 background: none;
   color: #DBEDF3;
@@ -70,7 +72,7 @@ background: none;
   color: red;
 }
 
-.buttonDec {
+.button-dec {
   outline: none;
   border: 10px solid #404B69;
   font-size: 5rem;
